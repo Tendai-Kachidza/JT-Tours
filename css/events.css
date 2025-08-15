@@ -222,12 +222,12 @@ section {
 
 /* ----------------------------------------------------------------    header css ends ---------     */
 
-/* ---------------------banner css */
+/* ---------------------event banner css */
 
 .banner-area {
     height: 60vh;
     width: 100%;
-    background: linear-gradient( #1c1a2521, #000000ab),url(../images/products/party-4926252_1280.png) no-repeat;
+    background: linear-gradient( #1c1a2521, #000000ab),url(../images/Festival-of-Colours-2.png) no-repeat;
     /* background-color: #eee; */
     background-attachment: fixed;
     background-position: center center;
