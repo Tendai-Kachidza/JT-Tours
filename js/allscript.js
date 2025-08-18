@@ -100,3 +100,42 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', updateCarousel);
 
+// --------------------------------------------contact us page js----------------------------------
+var form = document.getElementById("contactForm");
+var statusDiv = document.getElementById("form-status");
+
+form.addEventListener("submit", function(event) {
+    // Prevent the default form submission to a new page
+    event.preventDefault(); 
+
+    // Get the form data
+    var data = new FormData(event.target);
+
+    // Send the data to Formspree
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            // This header is required for Formspree to send a JSON response
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            // On success, display a success message and clear the form
+            statusDiv.innerHTML = "Thanks for your submission! We'll get back to you shortly.";
+            form.reset();
+        } else {
+            // On failure, parse the error message from the response and display it
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    statusDiv.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    statusDiv.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            });
+        }
+    }).catch(error => {
+        // Handle network errors
+        statusDiv.innerHTML = "Oops! Something went wrong with the network. Please try again.";
+    });
+});
