@@ -620,10 +620,59 @@
     <div class="content">
         <h1 class="heading">subscribe now</h1>
         <p>Subscribe for our travel newsletter to receive exclusive deals, destination inspiration, and helpful tips for your next vacation. Stay informed and get the most out of your travels by subscribing to our email list today.</p>
-        <form action="https://formspree.io/f/xqalowlk" method="POST">
-            <input type="email" name="" placeholder="enter your email" id="" class="email">
-            <input type="submit" value="subscribe" class="btn">
+        <form id="newsletter-form" action="https://formspree.io/f/xqalowlk" method="POST">
+
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Enter your email" 
+    required 
+    class="email"
+  >
+
+  <button type="submit" class="btn" id="subscribeBtn">
+    Subscribe
+  </button>
         </form>
+
+<script>
+const form = document.getElementById("newsletter-form");
+const btn = document.getElementById("subscribeBtn");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  btn.innerText = "Loading...";
+  btn.classList.add("loading");
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      btn.innerText = "Subscribed!";
+      btn.style.background = "#28a745";
+      form.reset();
+    } else {
+      btn.innerText = "Try again";
+      btn.classList.remove("loading");
+    }
+
+  } catch (error) {
+    btn.innerText = "Error";
+    btn.classList.remove("loading");
+  }
+});
+</script>
+
+
     </div>
 
 </section>
