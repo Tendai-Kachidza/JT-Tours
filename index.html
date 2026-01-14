@@ -213,18 +213,52 @@
 </section> -->
 
 <!-- map section starts  -->
+ <style>
+  .map .image {
+    width: 100%;
+    max-width: 600px;       /* Keeps it from becoming too big on desktop */
+    margin: 0 auto;
+}
+
+.map-img {
+    width: 100%;
+    height: auto;          /* Maintains aspect ratio */
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .map .image {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .map .content {
+        padding: 0 20px;
+    }
+}
+
+ </style>
 <section class="map" id="map">
   
    <div class="image">
-     <img src="images/falk/international-2693148_1280.jpg" class="center" alt="Description of image" style="width: 600px; height: 400px;">
+     <img src="images/falk/international-2693148_1280.jpg" class="map-img" alt="Falkland Islands map">
     </div>
     
 
     <div class="content">
-        <h3>Navigate Our Islands</h3>
+        <h3>Navigate With Us</h3>
         <p>Beneath the proud flutter of the Falklands flag lies an archipelago brimming with untold adventures. From rugged coastlines to teeming wildlife colonies and poignant historical sites, every corner holds a discovery.</p>
         <p>Let the spirit of these resilient islands guide your way as you begin to chart your journey.</p>
-        <a href="map.html" class="btn">see more</a>
+        <a href="about.html" class="btn">explore more</a>
     </div>
 </section>
 
@@ -735,7 +769,7 @@ form.addEventListener("submit", async function(e) {
             <a href="tel:+50052594"> <i class="fas fa-phone"></i> +500 52594</a>
             <a href="https://formspree.io/f/xqalowlk" style="text-transform: lowercase;"> <i class="fas fa-envelope"></i>info@jt-tours.com </a>
             <a href="https://www.google.com/maps/search/Falkland+Islands,+Malvinas" target="_blank">
-  <i class="fas fa-map"></i> Falkland Islands, Malvinas
+  <i class="fas fa-map"></i> Falkland Islands
 </a>
         </div>
 
@@ -748,7 +782,7 @@ form.addEventListener("submit", async function(e) {
 
     </div>
 
-   <div class="credit"><img src="images/new logo.png" alt="Logo" style="width: 100px; height: 100px; vertical-align: middle;"><br>©️ JT Tours 2025 - all rights reserved!</div>
+   <div class="credit"><img src="images/new logo.png" alt="Logo" style="width: 100px; height: 100px; vertical-align: middle;"><br>©️JT Tours 2026 - All Rights Reserved!</div>
 
 </section>
 

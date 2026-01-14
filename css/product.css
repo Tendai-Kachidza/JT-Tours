@@ -371,57 +371,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------------scroller to top css------------------------------------ */
 
 
@@ -452,22 +401,6 @@ section {
     opacity:1;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 
@@ -553,36 +486,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 779px) {
     .tabs {
         width: 100vw;
@@ -617,8 +520,6 @@ section {
 
 
 /*-------------------- horizontal navbar css */
-
-
 
 /* 
 @media (max-width: 599px) {
@@ -664,3 +565,155 @@ section {
     }
 
   }  */
+
+ /* Food Tab */
+.food-img {
+    width: 100%;
+    max-width: 550px;     /* keeps desktop size clean */
+    height: auto;        /* keeps correct aspect ratio */
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .food-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+  .tabs__content .row {
+    flex-direction: column !important;
+  }
+
+  .tabs__content .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .tabs__content p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    padding: 0 15px;
+  }
+
+  .tabs__content h5 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+ /* Shops Tab */
+.shop-img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+  .tabs__content .row {
+    flex-direction: column !important;
+  }
+
+  .tabs__content .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .tabs__content p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    padding: 0 15px;
+  }
+
+  .tabs__content h5 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+ /* Books Tab */
+.book-img {
+    width: 100%;
+    max-width: 260px;  
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+  .tabs__content .row {
+    flex-direction: column !important;
+  }
+
+  .tabs__content .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .tabs__content p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    padding: 0 15px;
+  }
+
+  .tabs__content h5 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+ /* Art Tab */
+.art-img {
+    width: 100%;
+    max-width: 420px;     /* perfect artwork size on desktop */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+  .tabs__content .row {
+    flex-direction: column !important;
+  }
+
+  .tabs__content .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .tabs__content p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    padding: 0 15px;
+  }
+
+  .tabs__content h5 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
